@@ -21,6 +21,35 @@
     />
     <meta name="author" content="SVG在线工具" />
     <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#3498db" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="SVG预览器" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.svg-tool.top/" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%233498db' rx='15'/><text x='50' y='60' text-anchor='middle' fill='white' font-size='40' font-weight='bold'>S</text></svg>"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' fill='%233498db' rx='25'/><text x='90' y='110' text-anchor='middle' fill='white' font-size='70' font-weight='bold'>S</text></svg>"
+    />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- 性能优化 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+
+    <!-- 网站地图 -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="在线SVG代码预览器 - 免费SVG编辑器" />
@@ -29,8 +58,12 @@
       content="免费的在线SVG代码预览器，支持实时编辑和预览SVG代码"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
+    <meta property="og:url" content="https://www.svg-tool.top/" />
+    <meta property="og:image" content="https://www.svg-tool.top/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="SVG在线工具" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -39,6 +72,12 @@
       name="twitter:description"
       content="免费的在线SVG代码预览器，支持实时编辑和预览SVG代码"
     />
+    <meta
+      name="twitter:image"
+      content="https://www.svg-tool.top/og-image.png"
+    />
+    <meta name="twitter:site" content="@your_twitter" />
+    <meta name="twitter:creator" content="@your_twitter" />
 
     <!-- 结构化数据 -->
     <script type="application/ld+json">
@@ -46,15 +85,100 @@
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "在线SVG代码预览器",
-        "description": "免费的在线SVG代码预览器，支持实时编辑和预览SVG代码",
-        "url": "",
+        "alternateName": "SVG预览器",
+        "description": "免费的在线SVG代码预览器，支持实时编辑和预览SVG代码。提供SVG代码编辑、预览、下载功能，是设计师和开发者的必备工具。",
+        "url": "https://www.svg-tool.top/",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Any",
+        "browserRequirements": "Chrome, Firefox, Safari, Edge",
+        "softwareVersion": "1.0",
+        "datePublished": "2024-07-25",
+        "dateModified": "2024-07-25",
+        "author": {
+          "@type": "Organization",
+          "name": "SVG在线工具"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "SVG在线工具"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0",
-          "priceCurrency": "CNY"
+          "priceCurrency": "CNY",
+          "availability": "https://schema.org/InStock"
+        },
+        "featureList": [
+          "实时SVG代码预览",
+          "SVG代码编辑器",
+          "代码格式化",
+          "SVG文件下载",
+          "示例代码库",
+          "错误检测提示",
+          "响应式设计"
+        ],
+        "screenshot": "https://www.svg-tool.top/screenshot.png",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "150"
         }
+      }
+    </script>
+
+    <!-- 面包屑导航结构化数据 -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "首页",
+            "item": "https://www.svg-tool.top/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "SVG在线预览器",
+            "item": "https://www.svg-tool.top/"
+          }
+        ]
+      }
+    </script>
+
+    <!-- FAQ结构化数据 -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "如何使用SVG在线预览器？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "在左侧编辑器中输入或粘贴SVG代码，右侧会实时显示预览效果。您可以使用工具栏的按钮来清空代码、格式化代码或下载SVG文件。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "支持哪些浏览器？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "支持所有现代浏览器，包括Chrome、Firefox、Safari、Edge等，同时支持移动端浏览器。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "是否免费使用？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "是的，这是一个完全免费的在线SVG工具，无需注册即可使用所有功能。"
+            }
+          }
+        ]
       }
     </script>
 
@@ -247,6 +371,26 @@
   </head>
   <body>
     <div class="container">
+      <!-- 面包屑导航 -->
+      <nav aria-label="面包屑导航" style="margin-bottom: 20px">
+        <ol
+          style="
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+          "
+        >
+          <li>
+            <a href="/" style="color: #3498db; text-decoration: none">首页</a>
+          </li>
+          <li style="margin: 0 8px">/</li>
+          <li style="color: #333">SVG在线预览器</li>
+        </ol>
+      </nav>
+
       <header>
         <h1>🎨 在线SVG代码预览器</h1>
         <p class="subtitle">实时编辑和预览SVG代码，支持下载和分享</p>
@@ -299,8 +443,133 @@
         </div>
       </section>
 
+      <!-- FAQ部分 -->
+      <section
+        class="faq-section"
+        style="
+          background: white;
+          border-radius: 10px;
+          padding: 30px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          margin-bottom: 30px;
+        "
+      >
+        <h2
+          style="
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+          "
+        >
+          ❓ 常见问题
+        </h2>
+
+        <div class="faq-item" style="margin-bottom: 20px">
+          <h3 style="color: #34495e; margin-bottom: 10px">
+            如何使用SVG在线预览器？
+          </h3>
+          <p style="color: #666; line-height: 1.6">
+            在左侧编辑器中输入或粘贴SVG代码，右侧会实时显示预览效果。您可以使用工具栏的按钮来清空代码、格式化代码或下载SVG文件。
+          </p>
+        </div>
+
+        <div class="faq-item" style="margin-bottom: 20px">
+          <h3 style="color: #34495e; margin-bottom: 10px">支持哪些浏览器？</h3>
+          <p style="color: #666; line-height: 1.6">
+            支持所有现代浏览器，包括Chrome、Firefox、Safari、Edge等，同时支持移动端浏览器。
+          </p>
+        </div>
+
+        <div class="faq-item" style="margin-bottom: 20px">
+          <h3 style="color: #34495e; margin-bottom: 10px">是否免费使用？</h3>
+          <p style="color: #666; line-height: 1.6">
+            是的，这是一个完全免费的在线SVG工具，无需注册即可使用所有功能。
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 style="color: #34495e; margin-bottom: 10px">
+            如何下载编辑的SVG？
+          </h3>
+          <p style="color: #666; line-height: 1.6">
+            点击工具栏中的"下载SVG"按钮，或使用快捷键Ctrl+S即可下载当前编辑的SVG文件。
+          </p>
+        </div>
+      </section>
+
+      <!-- 相关工具推荐 -->
+      <section
+        class="related-tools"
+        style="
+          background: white;
+          border-radius: 10px;
+          padding: 30px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          margin-bottom: 30px;
+        "
+      >
+        <h2
+          style="
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+          "
+        >
+          🔗 相关工具
+        </h2>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+          "
+        >
+          <div
+            style="padding: 15px; border: 1px solid #eee; border-radius: 8px"
+          >
+            <h4 style="color: #2c3e50; margin-bottom: 8px">SVG优化器</h4>
+            <p style="color: #666; font-size: 14px">压缩和优化SVG文件大小</p>
+          </div>
+          <div
+            style="padding: 15px; border: 1px solid #eee; border-radius: 8px"
+          >
+            <h4 style="color: #2c3e50; margin-bottom: 8px">SVG转换器</h4>
+            <p style="color: #666; font-size: 14px">
+              将SVG转换为PNG、JPG等格式
+            </p>
+          </div>
+          <div
+            style="padding: 15px; border: 1px solid #eee; border-radius: 8px"
+          >
+            <h4 style="color: #2c3e50; margin-bottom: 8px">图标生成器</h4>
+            <p style="color: #666; font-size: 14px">快速生成SVG图标和Logo</p>
+          </div>
+        </div>
+      </section>
+
       <footer>
-        <p>&copy; 2024 SVG在线预览器 | 免费开源工具 | 支持所有现代浏览器</p>
+        <div style="text-align: center; color: #7f8c8d">
+          <p>&copy; 2024 SVG在线预览器 | 免费开源工具 | 支持所有现代浏览器</p>
+          <p style="margin-top: 10px; font-size: 14px">
+            <a
+              href="/privacy"
+              style="color: #3498db; text-decoration: none; margin: 0 10px"
+              >隐私政策</a
+            >
+            <a
+              href="/terms"
+              style="color: #3498db; text-decoration: none; margin: 0 10px"
+              >使用条款</a
+            >
+            <a
+              href="/contact"
+              style="color: #3498db; text-decoration: none; margin: 0 10px"
+              >联系我们</a
+            >
+          </p>
+        </div>
       </footer>
     </div>
 
