@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO优化 -->
+    <title>页面未找到 - SVG在线预览器 | www.svg-tool.top</title>
+    <meta
+      name="description"
+      content="抱歉，您访问的页面不存在。返回SVG在线预览器主页，继续使用我们的免费SVG工具。"
+    />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#3498db" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%233498db' rx='15'/><text x='50' y='60' text-anchor='middle' fill='white' font-size='40' font-weight='bold'>S</text></svg>"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      .error-card {
+        background: white;
+        padding: 60px 40px;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .error-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #3498db, #9b59b6, #e74c3c, #f39c12);
+      }
+
+      .error-number {
+        font-size: 8em;
+        font-weight: bold;
+        color: #3498db;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+
+      .error-title {
+        font-size: 2.5em;
+        color: #2c3e50;
+        margin-bottom: 20px;
+      }
+
+      .error-message {
+        font-size: 1.2em;
+        color: #7f8c8d;
+        margin-bottom: 40px;
+        line-height: 1.6;
+      }
+
+      .actions {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+      }
+
+      .btn {
+        padding: 15px 30px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .btn-primary {
+        background-color: #3498db;
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: #2980b9;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(52, 152, 219, 0.3);
+      }
+
+      .btn-secondary {
+        background-color: #95a5a6;
+        color: white;
+      }
+
+      .btn-secondary:hover {
+        background-color: #7f8c8d;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(149, 165, 166, 0.3);
+      }
+
+      .search-box {
+        margin: 30px 0;
+      }
+
+      .search-input {
+        width: 100%;
+        max-width: 400px;
+        padding: 15px 20px;
+        border: 2px solid #ddd;
+        border-radius: 25px;
+        font-size: 16px;
+        outline: none;
+        transition: border-color 0.3s ease;
+      }
+
+      .search-input:focus {
+        border-color: #3498db;
+      }
+
+      .suggestions {
+        margin-top: 30px;
+        text-align: left;
+      }
+
+      .suggestions h3 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      .suggestion-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .suggestion-list li {
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .suggestion-list li:last-child {
+        border-bottom: none;
+      }
+
+      .suggestion-list a {
+        color: #3498db;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .suggestion-list a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-info {
+        margin-top: 40px;
+        padding-top: 30px;
+        border-top: 1px solid #eee;
+        color: #7f8c8d;
+        font-size: 14px;
+      }
+
+      .svg-icon {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 30px;
+        opacity: 0.8;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 20px 10px;
+        }
+
+        .error-card {
+          padding: 40px 20px;
+        }
+
+        .error-number {
+          font-size: 6em;
+        }
+
+        .error-title {
+          font-size: 2em;
+        }
+
+        .actions {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .btn {
+          width: 100%;
+          max-width: 300px;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="error-card">
+        <!-- SVG图标 -->
+        <div class="svg-icon">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle
+              cx="50"
+              cy="50"
+              r="45"
+              fill="none"
+              stroke="#3498db"
+              stroke-width="3"
+            />
+            <path
+              d="M30 40 Q50 20 70 40"
+              fill="none"
+              stroke="#e74c3c"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+            <circle cx="35" cy="35" r="3" fill="#e74c3c" />
+            <circle cx="65" cy="35" r="3" fill="#e74c3c" />
+            <path
+              d="M30 65 Q50 75 70 65"
+              fill="none"
+              stroke="#e74c3c"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+
+        <div class="error-number">404</div>
+        <h1 class="error-title">页面走丢了</h1>
+        <p class="error-message">
+          抱歉，您访问的页面不存在或已被移动。<br />
+          不过别担心，我们的SVG预览器依然为您服务！
+        </p>
+
+        <div class="actions">
+          <a href="/" class="btn btn-primary"> 🏠 返回主页 </a>
+          <a href="javascript:history.back()" class="btn btn-secondary">
+            ↩️ 返回上页
+          </a>
+        </div>
+
+        <div class="search-box">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="搜索您需要的功能..."
+            id="searchInput"
+          />
+        </div>
+
+        <div class="suggestions">
+          <h3>🔗 您可能在寻找：</h3>
+          <ul class="suggestion-list">
+            <li><a href="/">🎨 SVG在线预览器 - 主要功能</a></li>
+            <li><a href="/privacy.html">🔒 隐私政策 - 了解数据保护</a></li>
+            <li><a href="/terms.html">📋 使用条款 - 服务条款说明</a></li>
+            <li><a href="/contact.html">📞 联系我们 - 获取技术支持</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-info">
+          <p>
+            如果您认为这是一个错误，请<a
+              href="/contact.html"
+              style="color: #3498db"
+              >联系我们</a
+            >
+          </p>
+          <p>&copy; 2024 SVG在线预览器 | www.svg-tool.top</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // 搜索功能
+      document
+        .getElementById("searchInput")
+        .addEventListener("keypress", function (e) {
+          if (e.key === "Enter") {
+            const query = this.value.trim();
+            if (query) {
+              // 简单的搜索逻辑
+              if (
+                query.includes("SVG") ||
+                query.includes("预览") ||
+                query.includes("编辑")
+              ) {
+                window.location.href = "/";
+              } else if (query.includes("隐私") || query.includes("privacy")) {
+                window.location.href = "/privacy.html";
+              } else if (query.includes("条款") || query.includes("terms")) {
+                window.location.href = "/terms.html";
+              } else if (query.includes("联系") || query.includes("contact")) {
+                window.location.href = "/contact.html";
+              } else {
+                // 默认返回主页
+                window.location.href = "/";
+              }
+            }
+          }
+        });
+
+      // 自动聚焦搜索框
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("searchInput").focus();
+      });
+
+      // 记录404错误（如果有分析工具）
+      if (typeof gtag !== "undefined") {
+        gtag("event", "page_view", {
+          page_title: "404 Error",
+          page_location: window.location.href,
+        });
+      }
+    </script>
+  </body>
+</html>

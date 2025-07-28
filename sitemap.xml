@@ -14,7 +14,7 @@
 
   <!-- 隐私政策 -->
   <url>
-    <loc>https://www.svg-tool.top/privacy</loc>
+    <loc>https://www.svg-tool.top/privacy.html</loc>
     <lastmod>2024-07-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
@@ -22,7 +22,7 @@
 
   <!-- 使用条款 -->
   <url>
-    <loc>https://www.svg-tool.top/terms</loc>
+    <loc>https://www.svg-tool.top/terms.html</loc>
     <lastmod>2024-07-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
@@ -30,7 +30,7 @@
 
   <!-- 联系我们 -->
   <url>
-    <loc>https://www.svg-tool.top/contact</loc>
+    <loc>https://www.svg-tool.top/contact.html</loc>
     <lastmod>2024-07-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
