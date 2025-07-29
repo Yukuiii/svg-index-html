@@ -216,6 +216,44 @@
         opacity: 0.8;
       }
 
+      /* 暗黑模式样式 */
+      [data-theme="dark"] {
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        color: #e0e0e0;
+      }
+
+      [data-theme="dark"] .error-card {
+        background-color: #2d2d2d !important;
+        color: #e0e0e0;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+      }
+
+      [data-theme="dark"] .error-number {
+        color: #4a90e2 !important;
+      }
+
+      [data-theme="dark"] .error-title {
+        color: #ffffff !important;
+      }
+
+      [data-theme="dark"] .error-message {
+        color: #b0b0b0 !important;
+      }
+
+      [data-theme="dark"] .search-input {
+        background-color: #1e1e1e !important;
+        color: #e0e0e0 !important;
+        border-color: #404040 !important;
+      }
+
+      [data-theme="dark"] .suggestion-list a {
+        color: #4a90e2 !important;
+      }
+
+      [data-theme="dark"] .footer-info {
+        color: #b0b0b0 !important;
+      }
+
       @media (max-width: 768px) {
         .container {
           padding: 20px 10px;
@@ -248,6 +286,33 @@
   </head>
   <body>
     <div class="container">
+      <!-- 暗黑模式切换按钮 -->
+      <div style="position: fixed; top: 20px; right: 20px; z-index: 1000">
+        <button
+          id="darkModeToggle"
+          style="
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #3498db;
+            border-radius: 20px;
+            padding: 8px 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #3498db;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+          "
+          onmouseover="this.style.background='#3498db'; this.style.color='white';"
+          onmouseout="this.style.background='rgba(255,255,255,0.9)'; this.style.color='#3498db';"
+        >
+          <span id="darkModeIcon">🌙</span>
+          <span id="darkModeText">暗黑模式</span>
+        </button>
+      </div>
+
       <div class="error-card">
         <!-- SVG图标 -->
         <div class="svg-icon">
@@ -367,5 +432,7 @@
         });
       }
     </script>
+
+    <script src="/dark-mode.js"></script>
   </body>
 </html>
