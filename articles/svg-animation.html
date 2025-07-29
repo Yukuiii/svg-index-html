@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3158456046049631"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO优化 -->
+    <title>SVG动画制作指南 - 创建流畅的矢量动画 | www.svg-tool.top</title>
+    <meta
+      name="description"
+      content="学习SVG动画制作技巧，包括路径动画、变形动画和交互式动画。掌握CSS和JavaScript实现SVG动画的方法。"
+    />
+    <meta
+      name="keywords"
+      content="SVG动画,CSS动画,JavaScript动画,路径动画,SVG交互,矢量动画"
+    />
+    <meta name="author" content="SVG在线工具" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#3498db" />
+
+    <!-- Canonical URL -->
+    <link
+      rel="canonical"
+      href="https://www.svg-tool.top/articles/svg-animation.html"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%233498db' rx='15'/><text x='50' y='60' text-anchor='middle' fill='white' font-size='40' font-weight='bold'>S</text></svg>"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="SVG动画制作指南 - 创建流畅的矢量动画" />
+    <meta
+      property="og:description"
+      content="学习SVG动画制作技巧，包括路径动画、变形动画和交互式动画"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://www.svg-tool.top/articles/svg-animation.html"
+    />
+    <meta property="og:image" content="https://www.svg-tool.top/og-image.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SVG动画制作指南" />
+    <meta name="twitter:description" content="学习创建流畅的SVG动画效果" />
+
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "SVG动画制作指南",
+        "description": "学习SVG动画制作技巧，包括路径动画、变形动画和交互式动画",
+        "author": {
+          "@type": "Organization",
+          "name": "SVG在线工具"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "SVG在线工具"
+        },
+        "datePublished": "2024-07-25",
+        "dateModified": "2024-07-25",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.svg-tool.top/articles/svg-animation.html"
+        }
+      }
+    </script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        line-height: 1.7;
+        color: #333;
+        background-color: #f5f5f5;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .breadcrumb {
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #666;
+      }
+
+      .breadcrumb a {
+        color: #3498db;
+        text-decoration: none;
+      }
+
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      .article-header {
+        background: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .article-title {
+        color: #2c3e50;
+        font-size: 2.5em;
+        margin-bottom: 15px;
+        line-height: 1.2;
+      }
+
+      .article-meta {
+        color: #7f8c8d;
+        font-size: 1em;
+        margin-bottom: 20px;
+      }
+
+      .article-tags {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .tag {
+        background: #e8f4fd;
+        color: #3498db;
+        padding: 6px 15px;
+        border-radius: 20px;
+        font-size: 0.9em;
+        font-weight: 500;
+      }
+
+      .article-content {
+        background: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .article-content h2 {
+        color: #2c3e50;
+        font-size: 1.8em;
+        margin: 30px 0 20px 0;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #3498db;
+      }
+
+      .article-content h3 {
+        color: #34495e;
+        font-size: 1.4em;
+        margin: 25px 0 15px 0;
+      }
+
+      .article-content p {
+        margin-bottom: 20px;
+        color: #555;
+      }
+
+      .coming-soon {
+        text-align: center;
+        padding: 60px 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 10px;
+        margin: 30px 0;
+      }
+
+      .coming-soon h3 {
+        font-size: 2em;
+        margin-bottom: 15px;
+      }
+
+      .coming-soon p {
+        font-size: 1.2em;
+        opacity: 0.9;
+      }
+
+      .related-articles {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .related-articles h3 {
+        color: #2c3e50;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+      }
+
+      .related-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .related-list li {
+        margin-bottom: 10px;
+      }
+
+      .related-list a {
+        color: #3498db;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .related-list a:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        color: #7f8c8d;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 10px;
+        }
+
+        .article-header,
+        .article-content {
+          padding: 20px;
+        }
+
+        .article-title {
+          font-size: 2em;
+        }
+
+        .article-tags {
+          justify-content: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">首页</a> / <a href="/articles.html">文章</a> /
+        SVG动画制作指南
+      </nav>
+
+      <header class="article-header">
+        <h1 class="article-title">🎬 SVG动画制作指南</h1>
+        <div class="article-meta">
+          发布时间：2024年7月25日 · 阅读时间：8分钟
+        </div>
+        <div class="article-tags">
+          <span class="tag">动画</span>
+          <span class="tag">交互</span>
+          <span class="tag">CSS</span>
+        </div>
+      </header>
+
+      <article class="article-content">
+        <p>
+          SVG动画是现代网页设计中的重要技能，它能为用户界面带来生动的交互体验。本教程将详细介绍SVG动画的制作方法和最佳实践。
+        </p>
+
+        <h2>为什么选择SVG动画？</h2>
+        <p>相比传统的GIF或视频动画，SVG动画具有以下优势：</p>
+        <ul>
+          <li><strong>矢量特性</strong>：无限缩放不失真，适应各种屏幕</li>
+          <li><strong>文件小巧</strong>：比同等效果的GIF文件小很多</li>
+          <li><strong>可控性强</strong>：可以通过CSS和JavaScript精确控制</li>
+          <li><strong>交互友好</strong>：支持鼠标悬停、点击等交互</li>
+          <li><strong>SEO友好</strong>：搜索引擎可以索引SVG内容</li>
+        </ul>
+
+        <h2>CSS动画基础</h2>
+        <p>
+          CSS是创建SVG动画最简单的方法。我们可以使用CSS的<code>animation</code>和<code>transition</code>属性来实现各种效果。
+        </p>
+
+        <h3>1. 简单的旋转动画</h3>
+        <div class="code-block">
+          <pre>
+&lt;svg width="100" height="100"&gt;
+  &lt;circle cx="50" cy="50" r="20" fill="#3498db" class="rotating-circle"/&gt;
+&lt;/svg&gt;
+
+&lt;style&gt;
+.rotating-circle {
+  animation: rotate 2s linear infinite;
+  transform-origin: 50px 50px;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+&lt;/style&gt;</pre
+          >
+        </div>
+
+        <h3>2. 缩放脉冲效果</h3>
+        <div class="code-block">
+          <pre>
+&lt;svg width="100" height="100"&gt;
+  &lt;rect x="25" y="25" width="50" height="50" fill="#e74c3c" class="pulsing-rect"/&gt;
+&lt;/svg&gt;
+
+&lt;style&gt;
+.pulsing-rect {
+  animation: pulse 1.5s ease-in-out infinite;
+  transform-origin: 50px 50px;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+&lt;/style&gt;</pre
+          >
+        </div>
+
+        <h2>路径动画技巧</h2>
+        <p>
+          路径动画是SVG动画中最具特色的功能，可以创建沿着路径移动或绘制路径的效果。
+        </p>
+
+        <h3>1. 路径绘制动画</h3>
+        <p>
+          使用<code>stroke-dasharray</code>和<code>stroke-dashoffset</code>属性可以创建路径绘制效果：
+        </p>
+
+        <div class="code-block">
+          <pre>
+&lt;svg width="200" height="100"&gt;
+  &lt;path d="M10,50 Q100,10 190,50" stroke="#3498db" stroke-width="3"
+        fill="none" class="drawing-path"/&gt;
+&lt;/svg&gt;
+
+&lt;style&gt;
+.drawing-path {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: draw 3s ease-in-out infinite;
+}
+
+@keyframes draw {
+  0% { stroke-dashoffset: 200; }
+  50% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -200; }
+}
+&lt;/style&gt;</pre
+          >
+        </div>
+
+        <h3>2. 沿路径移动动画</h3>
+        <div class="code-block">
+          <pre>
+&lt;svg width="200" height="100"&gt;
+  &lt;path id="motion-path" d="M10,50 Q100,10 190,50" stroke="#ddd"
+        stroke-width="2" fill="none"/&gt;
+  &lt;circle r="5" fill="#e74c3c"&gt;
+    &lt;animateMotion dur="3s" repeatCount="indefinite"&gt;
+      &lt;mpath href="#motion-path"/&gt;
+    &lt;/animateMotion&gt;
+  &lt;/circle&gt;
+&lt;/svg&gt;</pre
+          >
+        </div>
+
+        <h2>JavaScript交互动画</h2>
+        <p>JavaScript可以让我们创建更复杂的交互式动画效果：</p>
+
+        <h3>1. 鼠标悬停动画</h3>
+        <div class="code-block">
+          <pre>
+&lt;svg width="150" height="150"&gt;
+  &lt;circle id="interactive-circle" cx="75" cy="75" r="30"
+          fill="#3498db" style="transition: all 0.3s ease;"/&gt;
+&lt;/svg&gt;
+
+&lt;script&gt;
+const circle = document.getElementById('interactive-circle');
+
+circle.addEventListener('mouseenter', () =&gt; {
+  circle.style.fill = '#e74c3c';
+  circle.style.transform = 'scale(1.2)';
+});
+
+circle.addEventListener('mouseleave', () =&gt; {
+  circle.style.fill = '#3498db';
+  circle.style.transform = 'scale(1)';
+});
+&lt;/script&gt;</pre
+          >
+        </div>
+
+        <h3>2. 点击触发动画</h3>
+        <div class="code-block">
+          <pre>
+&lt;svg width="200" height="100"&gt;
+  &lt;rect id="click-rect" x="50" y="25" width="100" height="50"
+        fill="#27ae60" style="cursor: pointer;"/&gt;
+&lt;/svg&gt;
+
+&lt;script&gt;
+const rect = document.getElementById('click-rect');
+let isAnimating = false;
+
+rect.addEventListener('click', () =&gt; {
+  if (isAnimating) return;
+
+  isAnimating = true;
+  rect.style.animation = 'bounce 0.6s ease-in-out';
+
+  setTimeout(() =&gt; {
+    rect.style.animation = '';
+    isAnimating = false;
+  }, 600);
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+&lt;/style&gt;</pre
+          >
+        </div>
+
+        <h2>变形动画效果</h2>
+        <p>SVG支持形状变形动画，可以创建令人印象深刻的视觉效果：</p>
+
+        <div class="code-block">
+          <pre>
+&lt;svg width="200" height="200"&gt;
+  &lt;path fill="#9b59b6"&gt;
+    &lt;animate attributeName="d"
+             values="M100,50 L150,150 L50,150 Z;
+                     M100,50 L180,100 L100,150 L20,100 Z;
+                     M100,50 L150,150 L50,150 Z"
+             dur="2s"
+             repeatCount="indefinite"/&gt;
+  &lt;/path&gt;
+&lt;/svg&gt;</pre
+          >
+        </div>
+
+        <h2>性能优化建议</h2>
+        <div class="highlight">
+          <strong>动画性能优化要点：</strong>
+          <ul>
+            <li>
+              <strong>使用CSS变换</strong>：优先使用transform而不是改变位置属性
+            </li>
+            <li><strong>避免重绘</strong>：尽量避免改变会触发重绘的属性</li>
+            <li>
+              <strong>合理使用will-change</strong>：提前告知浏览器哪些元素会变化
+            </li>
+            <li><strong>控制动画数量</strong>：同时运行的动画不要太多</li>
+            <li>
+              <strong>使用requestAnimationFrame</strong
+              >：对于复杂的JavaScript动画
+            </li>
+          </ul>
+        </div>
+
+        <h2>实践建议</h2>
+        <p>学习SVG动画的最佳方式是实践。建议您：</p>
+        <ol>
+          <li>从简单的CSS动画开始练习</li>
+          <li>逐步尝试路径动画和变形效果</li>
+          <li>学习JavaScript控制动画的方法</li>
+          <li>关注动画的性能表现</li>
+          <li>参考优秀的动画案例和库</li>
+        </ol>
+
+        <p>
+          现在就使用我们的<a href="/" style="color: #3498db">SVG在线预览器</a
+          >来实践这些动画技巧吧！
+        </p>
+      </article>
+
+      <div class="related-articles">
+        <h3>🔗 相关文章</h3>
+        <ul class="related-list">
+          <li><a href="/articles/svg-basics.html">SVG基础入门教程</a></li>
+          <li><a href="/articles/svg-optimization.html">SVG优化最佳实践</a></li>
+          <li><a href="/articles/svg-icons.html">SVG图标设计技巧</a></li>
+        </ul>
+      </div>
+
+      <div class="footer">
+        <p>
+          &copy; 2024 SVG在线预览器 |
+          <a href="/" style="color: #3498db">返回主页</a> |
+          <a href="/articles.html" style="color: #3498db">更多文章</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

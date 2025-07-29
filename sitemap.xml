@@ -35,5 +35,42 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-  
+
+  <!-- 文章栏目 -->
+  <url>
+    <loc>https://www.svg-tool.top/articles.html</loc>
+    <lastmod>2024-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 文章页面 -->
+  <url>
+    <loc>https://www.svg-tool.top/articles/svg-basics.html</loc>
+    <lastmod>2024-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.svg-tool.top/articles/svg-animation.html</loc>
+    <lastmod>2024-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.svg-tool.top/articles/svg-optimization.html</loc>
+    <lastmod>2024-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.svg-tool.top/articles/svg-icons.html</loc>
+    <lastmod>2024-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
